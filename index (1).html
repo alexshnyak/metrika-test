@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный лендинг | Проект для Яндекс.Метрики</title>
+    
+    <!-- 
+      =================================================================
+      ЯНДЕКС.МЕТРИКА — ВСТАВЬТЕ ВАШ КОД НИЖЕ
+      Замените XXXXXXXX на ваш номер счетчика (8 цифр) в двух местах!
+      =================================================================
+    -->
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       // !!! ВАЖНО: ЗАМЕНИТЕ 106198627 НА ВАШ НОМЕР СЧЕТЧИКА !!!
+       ym(106198627, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/106198627" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- ================================================================= -->
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --text: #0f172a;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .features {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: #1e293b;
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-btn {
+            background: #f1f5f9;
+            color: #334155;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .card-btn:hover {
+            background: #e2e8f0;
+        }
+
+        .form-section {
+            background: #ffffff;
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+        }
+
+        .form-section h2 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #94a3b8;
+            font-size: 0.875rem;
+            border-top: 1px solid #e2e8f0;
+            background: #ffffff;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">AnalyticsTest</a>
+            <div class="nav-links">
+                <a href="#features">Услуги</a>
+                <a href="#form">Контакты</a>
+                <a href="#form" class="btn" style="padding: 0.5rem 1rem;">Оставить заявку</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Простой сайт для тестирования Яндекс.Метрики</h1>
+        <p>Нажмите на кнопки, проскролльте страницу и заполните форму, чтобы сгенерировать клики, карту скроллинга и визиты в Вебвизоре.</p>
+        <a href="#form" id="btn-hero-action" class="btn" onclick="ym(106198627, 'reachGoal', 'hero_click'); return true;">Тестовое целевое действие</a>
+    </section>
+
+    <section class="features" id="features">
+        <div class="card">
+            <h3>Мониторинг кликов</h3>
+            <p>Отслеживайте клики пользователей по элементам интерфейса на карте кликов.</p>
+            <a href="#" class="card-btn" onclick="ym(106198627, 'reachGoal', 'card_click_1'); return false;">Узнать больше</a>
+        </div>
+        <div class="card">
+            <h3>Карта скроллинга</h3>
+            <p>Оценивайте глубину просмотра страницы посетителями в режиме реального времени.</p>
+            <a href="#" class="card-btn" onclick="ym(106198627, 'reachGoal', 'card_click_2'); return false;">Узнать больше</a>
+        </div>
+        <div class="card">
+            <h3>Вебвизор 2.0</h3>
+            <p>Записывайте движения мыши, скроллы и клики каждого реального посетителя.</p>
+            <a href="#" class="card-btn" onclick="ym(106198627, 'reachGoal', 'card_click_3'); return false;">Узнать больше</a>
+        </div>
+    </section>
+
+    <section class="form-section" id="form">
+        <h2>Форма обратной связи</h2>
+        <form onsubmit="alert('Форма отправлена! Цель зафиксирована в Яндекс.Метрике.'); ym(106198627, 'reachGoal', 'form_submit'); return false;">
+            <div class="form-group">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" placeholder="Иван Иванов" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Ваш Email</label>
+                <input type="email" id="email" placeholder="example@mail.ru" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Сообщение</label>
+                <textarea id="message" rows="4" placeholder="Введите ваше сообщение..."></textarea>
+            </div>
+            <button type="submit" id="btn-submit-form" class="btn" style="width: 100%;">Отправить форму</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Практическая работа по Веб-аналитике | Яндекс.Метрика</p>
+    </footer>
+
+</body>
+</html>
