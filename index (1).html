@@ -5,29 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Учебный лендинг | Проект для Яндекс.Метрики</title>
     
-    <!-- 
-      =================================================================
-      ЯНДЕКС.МЕТРИКА — ВСТАВЬТЕ ВАШ КОД НИЖЕ
-      Замените XXXXXXXX на ваш номер счетчика (8 цифр) в двух местах!
-      =================================================================
-    -->
+    <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();
-       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112333024', 'ym');
 
-       // !!! ВАЖНО: ЗАМЕНИТЕ 106198627 НА ВАШ НОМЕР СЧЕТЧИКА !!!
-       ym(106198627, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-       });
+        ym(112333024, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/106198627" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- ================================================================= -->
+    <noscript><div><img src="https://mc.yandex.ru/watch/112333024" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
     <style>
         :root {
@@ -235,30 +225,30 @@
     <section class="hero">
         <h1>Простой сайт для тестирования Яндекс.Метрики</h1>
         <p>Нажмите на кнопки, проскролльте страницу и заполните форму, чтобы сгенерировать клики, карту скроллинга и визиты в Вебвизоре.</p>
-        <a href="#form" id="btn-hero-action" class="btn" onclick="ym(106198627, 'reachGoal', 'hero_click'); return true;">Тестовое целевое действие</a>
+        <a href="#form" id="btn-hero-action" class="btn" onclick="ym(112333024, 'reachGoal', 'hero_click'); return true;">Тестовое целевое действие</a>
     </section>
 
     <section class="features" id="features">
         <div class="card">
             <h3>Мониторинг кликов</h3>
             <p>Отслеживайте клики пользователей по элементам интерфейса на карте кликов.</p>
-            <a href="#" class="card-btn" onclick="ym(106198627, 'reachGoal', 'card_click_1'); return false;">Узнать больше</a>
+            <a href="#" class="card-btn" onclick="ym(112333024, 'reachGoal', 'card_click_1'); return false;">Узнать больше</a>
         </div>
         <div class="card">
             <h3>Карта скроллинга</h3>
             <p>Оценивайте глубину просмотра страницы посетителями в режиме реального времени.</p>
-            <a href="#" class="card-btn" onclick="ym(106198627, 'reachGoal', 'card_click_2'); return false;">Узнать больше</a>
+            <a href="#" class="card-btn" onclick="ym(112333024, 'reachGoal', 'card_click_2'); return false;">Узнать больше</a>
         </div>
         <div class="card">
             <h3>Вебвизор 2.0</h3>
             <p>Записывайте движения мыши, скроллы и клики каждого реального посетителя.</p>
-            <a href="#" class="card-btn" onclick="ym(106198627, 'reachGoal', 'card_click_3'); return false;">Узнать больше</a>
+            <a href="#" class="card-btn" onclick="ym(112333024, 'reachGoal', 'card_click_3'); return false;">Узнать больше</a>
         </div>
     </section>
 
     <section class="form-section" id="form">
         <h2>Форма обратной связи</h2>
-        <form onsubmit="alert('Форма отправлена! Цель зафиксирована в Яндекс.Метрике.'); ym(106198627, 'reachGoal', 'form_submit'); return false;">
+        <form onsubmit="alert('Форма отправлена! Цель зафиксирована в Яндекс.Метрике.'); ym(112333024, 'reachGoal', 'form_submit'); return false;">
             <div class="form-group">
                 <label for="name">Ваше имя</label>
                 <input type="text" id="name" placeholder="Иван Иванов" required>
